@@ -1,0 +1,154 @@
+.about {
+  padding-top: 50px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("/img/about.png");
+    background-repeat: no-repeat;
+    top: -3px;
+    right: -2px;
+    width: 41%;
+    height: 363px;
+  }
+}
+
+.about__wrapper {
+  max-width: 528px;
+}
+
+.about__header {
+  font-family: "Gotham Pro", "Verdana", sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: 0.0025em;
+  color: #29435d;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 19px;
+}
+
+.about__info {
+  font-family: "Gotham Pro";
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.0025em;
+  color: #8391b2;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.about__btn {
+  width: 160px;
+  height: 32px;
+  box-sizing: border-box;
+  background: #2F93FE;
+  border-radius: 6px;
+  padding: 8px 20px;
+
+  font-family: "MuseoSansCyrl", "Verdana", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+
+  text-align: center;
+  letter-spacing: 0.0275em;
+  text-decoration: none;
+  color: #ffffff;
+
+  &:hover {
+    background: #71b6ff;
+  }
+
+  &:active {
+    background: #0971f5;
+  }
+
+  &:disabled {
+    background: #c8c8c8;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1190px) {
+  .about {
+    padding-top: 17px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("/img/about-tablet.png");
+      top: -11px;
+      right: 12px;
+      height: 247px;
+    }
+  }
+
+  .about__wrapper {
+    width: 57%;
+  }
+
+  .about__header {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 31px;
+  }
+
+  .about__info {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about {
+    padding-top: 2px;
+    padding-bottom: 175px;
+
+    &::after {
+      background-image: url("/img/about-mobile.png");
+      width: 59%;
+      height: 175px;
+      min-width: 209px;
+      top: 158px;
+      right: 28px;
+    }
+  }
+
+  .about__header {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .about__wrapper {
+    // width: 100%;
+  }
+
+  .about__info {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 25px;
+  }
+
+  .about__btn {
+    width: 160px;
+    height: 32px;
+    box-sizing: border-box;
+    background: #2F93FE;
+    border-radius: 6px;
+    padding: 7px 12px;
+    font-size: 10px;
+    line-height: 24px;
+  }
+
+}
