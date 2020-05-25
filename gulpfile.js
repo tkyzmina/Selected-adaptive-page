@@ -102,8 +102,18 @@ gulp.task("copy", function () {
 });
 
 gulp.task("clean", function () {
-  return del("build");
+  return del("build", "docs");
+});
+gulp.task("cleanpages", function () {
+  return del("docs");
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
+gulp.task("pages", function () {
+  return gulp.src(["build/**/**"], {
+      base: "build"
+    })
+    .pipe(gulp.dest("docs"));
+});
+
+gulp.task("build", gulp.series("cleanpages", "clean", "copy", "css", "sprite", "html", "pages"));
 gulp.task("start", gulp.series("build", "server"));
