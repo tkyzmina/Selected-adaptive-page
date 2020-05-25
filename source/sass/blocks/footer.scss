@@ -1,6 +1,7 @@
 .footer {
   padding-top: 40px;
   box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
 }
 
 .socials__icon {
@@ -25,7 +26,6 @@
   width: 112px;
   height: auto;
   margin-bottom: 30px;
-  padding-left: 4px;
 }
 
 .socials__list {
@@ -33,6 +33,11 @@
   padding: 0;
   margin: 0;
   display: flex;
+}
+
+.footer__nav {
+  min-width: 748px;
+  flex-grow: 1;
 }
 
 .footer__list {
@@ -45,17 +50,19 @@
 
 .footer__wrapper {
   display: flex;
+  flex-direction: column;
   padding-left: 4px;
+  margin-right: 28px;
 }
 
 .footer__item {
-  min-width: 128px;
-  margin-right: 58px;
+  margin: 0;
+  padding: 0;
+  width: 25%;
   text-align: left;
-
-  &:nth-of-type(4n) {
-    margin-right: 0;
-  }
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 20px;
 }
 
 .footer__link {
@@ -68,4 +75,12 @@
   letter-spacing: 0.0275em;
   text-decoration: none;
   color: #8391b2;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    color: #29435d;
+  }
 }

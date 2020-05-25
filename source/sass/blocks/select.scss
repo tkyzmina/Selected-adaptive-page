@@ -146,6 +146,18 @@
   cursor: pointer;
   top: 9px;
   left: 0px;
+
+  &:checked~.form__checkmark {
+    background: no-repeat url("/img/check-mark.png");
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &:disabled~.form__checkmark {
+    background-color: #c8c8c8;
+  }
 }
 
 .form__label {
