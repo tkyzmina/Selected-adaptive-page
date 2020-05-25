@@ -50,11 +50,186 @@
         <h1 class="about__header">Надежные серверы для проектов любой сложности</h1>
         <p class="about__info">Выделенный сервер — это аренда сервера под задачи вашего проекта с возможностью свободно
           распоряжаться ресурсами машины и установки любого программного обеспечения.</p>
-        <a href="#" class="about__btn">Готовые серверы</a>
+        <a href="https://selectel.ru/" target="_blank" class="about__btn">Готовые серверы</a>
       </div>
     </section>
+    <section class="select container">
+      <h2 class="select__header">Доступные конфигурации</h2>
+      <form class="select__form form" method="post" action="https://echo.htmlacademy.ru">
+        <fieldset class="select__slide">
 
+          <div class="select__range range">
+            <h3 class="range__header" aria-label="выберите количество ядер">vCPU</h3>
+            <div class="range__item">
+              <p class="range__min">2</p>
+              <div class="range__line">
+                <div class="range__bar"></div>
+              </div>
+              <div class="range__pin">
+                <p class="range__value">6 ядер</p>
+              </div>
+              <p class="range__max">12</p>
+            </div>
+
+          </div>
+        </fieldset>
+
+        <fieldset class="form__type">
+          <ul class="form__list">
+            <li class="form__item">
+              <label class="form__label" for="gpu">GPU<input class="form__checkbox" type="radio" name="type" value="GPU"
+                  id="gpu">
+                <span class="form__checkmark"></span>
+              </label>
+            </li>
+            <li class="form__item">
+
+              <label class="form__label" for="raid">RAID<input class="form__checkbox" type="radio" name="type"
+                  value="RAID" id="raid">
+                <span class="form__checkmark"></span>
+              </label>
+            </li>
+            <li class="form__item">
+
+              <label class="form__label" for="ssd">SSD
+                <input class="form__checkbox" type="radio" name="type" value="SSD" id="ssd">
+                <span class="form__checkmark"></span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+      </form>
+    </section>
+    <section class="products container">
+      <h2 class="products__header">Performance Line</h2>
+      <ul class="products__list">
+        <li class="products__item item">
+          <h3 class="item__header">D8</h3>
+          <div class="item__wrapper">
+            <div class="item__one">
+              <p class="item__text">2 × Intel Xeon</p>
+              <p class="item__text">E-2236</p>
+              <p class="item__text">3.4 ГГц, 6 ядер</p>
+            </div>
+            <div class="item__two">
+              <p class="item__text">32 ГБ RAM</p>
+            </div>
+            <div class="item__tree">
+              <p class="item__text">460 ГБ SSD</p>
+            </div>
+            <div class="item__optional">
+              <p class="item__text"></p>
+            </div>
+            <div class="item__four">
+              <p class="item__price">16 000 ₽/месяц</p>
+              <a href="https://selectel.ru/" target="_blank" class="item__button">Заказать</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="products__item item">
+          <h3 class="item__header">C11</h3>
+          <div class="item__wrapper">
+            <div class="item__one">
+              <p class="item__text">2 × Intel Xeon</p>
+              <p class="item__text">E5-1650</p>
+              <p class="item__text">3.6 ГГц, 6 ядер</p>
+            </div>
+            <div class="item__two">
+              <p class="item__text">32 ГБ RAM</p>
+            </div>
+            <div class="item__tree">
+              <p class="item__text">4 x 500 ГБ HDD</p>
+            </div>
+            <div class="item__optional">
+              <p class="item__text"></p>
+            </div>
+            <div class="item__four">
+              <p class="item__price">32 000 ₽/месяц</p>
+              <a href="https://selectel.ru/" target="_blank" class="item__button">Заказать</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="products__item item">
+          <h3 class="item__header">D3</h3>
+          <div class="item__wrapper">
+            <div class="item__one">
+              <p class="item__text">2 × Intel Xeon</p>
+              <p class="item__text">E3-3420</p>
+              <p class="item__text">2.5 ГГц, 6 ядер</p>
+            </div>
+            <div class="item__two">
+              <p class="item__text">32 ГБ RAM</p>
+            </div>
+            <div class="item__tree">
+              <p class="item__text">240 ГБ SSD</p>
+            </div>
+            <div class="item__optional">
+              <p class="item__text"></p>
+            </div>
+            <div class="item__four">
+              <p class="item__price">39 500 ₽/месяц</p>
+              <a href="https://selectel.ru/" target="_blank" class="item__button">Заказать</a>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </section>
   </main>
+  <footer class="footer container">
+    <h2 class="visually-hidden">Компания Selectel</h2>
+    <a href="#" class="footer__logo">
+      <img src="img/logo-mobile.svg" alt="Логотип Selectel" width="52" height="11">
+    </a>
+    <div class="footer__wrapper">
+      <div class="footer__socials socials">
+        <ul class="socials__list">
+          <li class="socials__item"><a href="https://vk.com/selectel" class="socials__vk">
+              <svg class="socials__icon" role="img" width="22" height="22">
+                <use xlink:href="img/sprite_auto.svg#icon-vk"></use>
+              </svg>
+            </a></li>
+          <li class="socials__item"><a href="https://www.facebook.com/selectel/" class="socials__fb">
+              <svg class="socials__icon" role="img" width="22" height="22">
+                <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
+              </svg>
+            </a></li>
+          <li class="socials__item"><a href="https://twitter.com/selectel" class="socials__twitter">
+              <svg class="socials__icon" role="img" width="22" height="22">
+                <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
+              </svg>
+            </a></li>
+          <li class="socials__item"><a href="https://www.instagram.com/selectel.ru/" class="socials__insta">
+              <svg class="socials__icon" role="img" width="22" height="22">
+                <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
+              </svg></a></li>
+        </ul>
+      </div>
+
+      <nav class="footer__nav">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="" class="footer__link">Серверы</a></li>
+          <li class="footer__item">
+            <a href="" class="footer__link">Оборудование</a></li>
+          <li class="footer__item">
+            <a href="" class="footer__link">Дата-центры</a></li>
+          <li class="footer__item">
+            <a href="" class="footer__link">Блог</a></li>
+          <li class="footer__item">
+            <a href="" class="footer__link">Облако</a></li>
+          <li class="footer__item">
+            <a href="" class="footer__link">Решения</a></li>
+          <li class="footer__item">
+            <a href="" class="footer__link">О компании</a></li>
+          <li class="footer__item">
+            <a href="" class="footer__link">Офисы</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
 </body>
 
 </html>
