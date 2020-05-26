@@ -212,7 +212,6 @@ let sortedArray = [];
 
 checkboxes.addEventListener('change', function (evt) {
   sortedArray.length = 0;
-  console.log(evt.target);
   checkboxValue = evt.target.value;
 
   if (checkboxValue == 'SSD') {

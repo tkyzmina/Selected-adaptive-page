@@ -148,7 +148,7 @@
   left: 0px;
 
   &:checked~.form__checkmark {
-    background: no-repeat url("/img/check-mark.png");
+    background: no-repeat url("../img/check-mark.png");
 
     &::after {
       display: none;

@@ -1,32 +1,4 @@
 'use strict';
-// var pageHeader = document.querySelector('.page-header');
-// var headerToggle = document.querySelector('.page-header__toggle');
-
-// pageHeader.classList.remove('page-header--nojs');
-
-// headerToggle.addEventListener('click', function () {
-//   if (pageHeader.classList.contains('page-header--closed')) {
-//     pageHeader.classList.remove('page-header--closed');
-//     pageHeader.classList.add('page-header--opened');
-//   } else {
-//     pageHeader.classList.add('page-header--closed');
-//     pageHeader.classList.remove('page-header--opened');
-//   }
-// });
-// ----------------------
-// var xhr = new XMLHttpRequest();
-// xhr.responseType = 'json';
-// xhr.addEventListener('load', function (evt) {
-//   console.log(evt.target === xhr);
-//   console.log(xhr.response);
-// });
-
-// xhr.open('GET', 'https://api.jsonbin.io/b/5df3c10a2c714135cda0bf0f/1');
-
-// xhr.send();
-
-// xhr.responseType = 'json';
-// ---------
 let servers = [{
   "name": "G1",
   "disk": {
@@ -204,21 +176,12 @@ let servers = [{
 let card = document.querySelector('.products__item');
 let list = document.querySelector('.products__list');
 let setCard = document.querySelectorAll('.products__item');
+let checkboxes = document.querySelector('.form__type');
 
 for (let item of setCard) {
   item.remove()
 }
 
-// let getRam = function (server) {
-//   let diskText = '';
-//   if (server.disk.count >= 2) {
-//     diskText += server.disk.count + ' x ' + server.disk.value + ' ГБ ' + server.disk.type;
-//   } else {
-//     diskText += server.disk.value + ' ГБ ' + server.disk.type
-//   }
-//   return diskText;
-// }
-// let diskText = '';
 let renderCard = function (server) {
   let newCard = card.cloneNode(true);
   newCard.querySelector('.item__header').textContent = server.name;
@@ -243,3 +206,45 @@ for (var i = 0; i < servers.length; i++) {
   fragment.appendChild(renderCard(servers[i]));
 }
 list.appendChild(fragment);
+// __________сортировка
+let checkboxValue = '';
+let sortedArray = [];
+
+checkboxes.addEventListener('change', function (evt) {
+  sortedArray.length = 0;
+  checkboxValue = evt.target.value;
+
+  if (checkboxValue == 'SSD') {
+    servers.filter(function (elem) {
+      for (let key in elem) {
+        for (let type in elem[key]) {
+          if (elem[key][type] == checkboxValue) {
+            sortedArray.push(elem);
+          }
+        }
+      }
+    });
+  } else if (checkboxValue == 'GPU') {
+    servers.filter(function (elem) {
+      for (let key in elem) {
+        if (key == 'gpu') {
+          sortedArray.push(elem);
+        }
+      }
+    });
+  } else if (checkboxValue == 'RAID') {
+    servers.filter(function (elem) {
+      for (let key in elem) {
+        if (key == 'disk') {
+          for (let count in elem[key]) {
+            if (count == 'count' && elem[key][count] >= 2) {
+              sortedArray.push(elem);
+            }
+          }
+        }
+      }
+    });
+  }
+
+  console.log(sortedArray);
+});
